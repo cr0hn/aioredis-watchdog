@@ -36,7 +36,7 @@ async def watchdog(redis_pattern: str,
             events_count += 1
 
             _value = value.decode("UTF-8")
-            modified_key = _value[_value.rfind(":") + 1:]
+            modified_key = _value[_value.find("__:") + 3:]
             modified_value = await redis_connection.get(modified_key)
 
             for cb in callbacks:
