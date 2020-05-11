@@ -1,5 +1,5 @@
-Redis Watchdog for Python
-=========================
+Redis Watchdog
+==============
 
 This project allow to monitor Redis keys for changes and launch callbacks.
 
