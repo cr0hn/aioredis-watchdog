@@ -16,6 +16,10 @@ async def watchdog(redis_pattern: str,
             print("Key: ", key, "- Value", value)
     >>> await watchdog("*", print_modified, redis)
     """
+
+    if not redis_pattern.startswith("*"):
+        redis_pattern = f"*{redis_pattern}"
+
     # Config redis for callbacks
     await redis_connection.config_set("notify-keyspace-events", "KEA")
 
