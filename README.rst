@@ -3,6 +3,11 @@ Redis Watchdog
 
 This project allow to monitor Redis keys for changes and launch callbacks.
 
+Support this project
+====================
+
+Support this project (to solve issues, new features...) by applying the Github "Sponsor" button.
+
 Install
 =======
 
